@@ -1,0 +1,283 @@
+* {
+	box-sizing: border-box;
+	font-family: "Montserrat";
+	margin: 0;
+	border: 0;
+}
+
+h1,
+h2 {
+	margin: 0;
+}
+
+.container {
+	padding: 0 5%;
+	margin: 0 auto;
+}
+
+.nav {
+	padding: 2% 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid gray;
+}
+
+.nav__shopping-cart {
+	display: flex;
+	align-items: center;
+}
+
+.nav__title {
+	font-weight: 700;
+	font-size: 24px;
+}
+
+.nav__link {
+	text-decoration: none;
+	color: black;
+}
+
+.nav__link:hover {
+	text-decoration: none;
+	color: #33312c;
+	fill: #33312c;
+}
+
+.nav__shopping-cart-icon {
+	margin-left: 10px;
+	height: 30px;
+}
+
+.shopping-cart {
+	padding: 4% 0;
+}
+
+.shopping-cart__title {
+	font-size: 40px;
+}
+
+.shopping-cart__count {
+	margin: 1% 0 2% 0;
+	font-size: 1.7vw;
+	font-weight: 300;
+}
+
+.shopping-cart__wrapper,
+.catalog__wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+
+.shopping-cart__order {
+	width: 60%;
+}
+
+.cart-item {
+	display: flex;
+	align-items: center;
+	border-top: 1px solid gray;
+	height: 15vw;
+	padding: 1% 0;
+}
+
+.cart-item:nth-last-child(1) {
+	border-bottom: 1px solid gray;
+}
+
+.cart-item__img {
+	width: 40%;
+	height: 100%;
+}
+
+.cart-item__img-src {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.cart-item__content {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 3%;
+	height: 100%;
+	width: 60%;
+}
+
+.cart-item__title {
+	font-weight: 700;
+	font-size: 1.7vw;
+	padding-bottom: 2%;
+}
+
+.cart-item__color,
+.cart-item__general-dimensions {
+	font-weight: 300;
+	font-size: 1vw;
+}
+
+.cart-item__price_default,
+.cart-item__price_discount,
+.purchase__total-title,
+.purchase__total-price {
+	font-weight: 700;
+	font-size: 1.7vw;
+}
+
+.cart-item__price_discount {
+	margin-left: 7%;
+}
+
+.cart-item__price_irrelevant {
+	text-decoration: line-through;
+	color: #c9c9c9;
+	font-weight: 300;
+}
+
+.cart-item__price {
+	display: flex;
+	align-items: center;
+}
+
+.purchase {
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	right: 0;
+	padding: 3%;
+	margin-right: 5%;
+	width: 30%;
+	background-color: #f4f3f1;
+	height: 15vw;
+}
+
+.button {
+	font-weight: 300;
+	font-size: 1.2vw;
+	color: #fff;
+	background-color: #33312c;
+	border-radius: 5px;
+	height: 40%;
+	cursor: pointer;
+}
+
+.button:hover {
+	background-color: #22201d;
+}
+
+.purchase__text {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.purchase__discount-message {
+	font-weight: 300;
+	font-size: 1.2vw;
+}
+
+.catalog__wrapper {
+	flex-wrap: wrap;
+	padding-top: 50px;
+}
+
+.catalog-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	border: 1px solid gray;
+	height: 430px;
+	width: 30%;
+	padding: 1% 2%;
+	margin-bottom: 30px;
+}
+
+.catalog-item_added {
+	background-color: rgb(244, 244, 244);
+}
+
+.catalog-item__img {
+	width: 100%;
+}
+
+.catalog-item__img-src {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.catalog-item__content {
+	padding: 3% 0;
+	text-align: center;
+}
+
+.catalog-item__title {
+	font-weight: 700;
+	font-size: 1.7vw;
+}
+
+.catalog-item__color,
+.catalog-item__general-dimensions {
+	font-weight: 300;
+	font-size: 1vw;
+	margin-top: 7px;
+}
+
+.catalog-item__price_default,
+.catalog-item__price_discount,
+.purchase__total-title,
+.purchase__total-price {
+	font-weight: 700;
+	font-size: 1.7vw;
+}
+
+.catalog-item__price_discount {
+	margin-left: 7%;
+}
+
+.catalog-item__price_irrelevant {
+	text-decoration: line-through;
+	color: #c9c9c9;
+	font-weight: 300;
+}
+
+.catalog-item__price {
+	text-align: center;
+	margin-top: 10px;
+}
+
+.catalog-item__button {
+	width: 50%;
+	height: 40px;
+	margin-top: 10px;
+	font-weight: 300;
+	font-size: 18px;
+	color: #fff;
+	border-radius: 5px;
+	background-color: #33312c;
+	cursor: pointer;
+}
+
+.catalog-item__button:hover {
+	background-color: #22201d;
+}
+
+.catalog-item__button_added {
+	width: 50%;
+	height: 40px;
+	margin-top: 10px;
+	font-weight: 300;
+	font-size: 18px;
+	color: #fff;
+	border-radius: 5px;
+	background-color: #535351;
+	cursor: default;
+}
+
+.catalog-item__button_added:hover {
+	background-color: #535351;
+}
