@@ -10,34 +10,32 @@
 		<link rel="stylesheet" href="./css/style.css" />
 	</head>
 	<body>
-		<header class="header">
-			<div class="container">
-				<div class="nav">
-					<a href="./index.html" class="nav__title nav__link">Catalog</a>
-					<a href="./cart.html" class="nav__shopping-cart nav__link">
-						<div class="nav__title">Cart</div>
-						<svg class="nav__shopping-cart-icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-							<path d="M0 0h48v48H0z" fill="none" />
-							<g id="Shopicon">
-								<polygon
-									points="8.649,10.27 14.857,28.896 9.923,40 20,40 32,40 40,40 40,36 16.078,36 18.3,31 38.441,31 44.775,12 13.441,12 
+		<header class="header container">
+			<nav class="nav">
+				<a href="./index.html" class="nav__title nav__link">Catalog</a>
+				<a href="./cart.html" class="nav__shopping-cart nav__link">
+					<div class="nav__title">Cart</div>
+					<svg class="nav__shopping-cart-icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+						<path d="M0 0h48v48H0z" fill="none" />
+						<g id="Shopicon">
+							<polygon
+								points="8.649,10.27 14.857,28.896 9.923,40 20,40 32,40 40,40 40,36 16.078,36 18.3,31 38.441,31 44.775,12 13.441,12 
                                 11.441,6 4,6 4,10 8.333,10 	" />
-								<circle cx="20" cy="42" r="2" />
-								<circle cx="32" cy="42" r="2" />
-							</g>
-						</svg>
-					</a>
-				</div>
-			</div>
+							<circle cx="20" cy="42" r="2" />
+							<circle cx="32" cy="42" r="2" />
+						</g>
+					</svg>
+				</a>
+			</nav>
 		</header>
-		<section class="shopping-cart">
+		<section class="shopping-cart container">
 			<div class="container">
 				<h1 class="shopping-cart__title">Shopping Cart</h1>
 				<h2 class="shopping-cart__count"></h2>
 				<div class="shopping-cart__wrapper">
 					<div class="shopping-cart__order"></div>
 					<div class="purchase">
-						<button class="button" onclick="useDiscount()">Use 20% discount</button>
+						<button class="button">Use 20% discount</button>
 						<div class="purchase__text">
 							<div class="purchase__total-title">Total</div>
 							<div class="purchase__total-price"></div>

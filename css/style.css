@@ -30,7 +30,7 @@ h2 {
 
 .nav__title {
 	font-weight: 700;
-	font-size: 24px;
+	font-size: 1.7vw;
 }
 
 .nav__link {
@@ -141,6 +141,23 @@ h2 {
 	align-items: center;
 }
 
+.cart-item__trash {
+	width: 8%;
+	background: none;
+	cursor: pointer;
+}
+
+.cart-item__trash-svg {
+	width: 100%;
+	height: 100%;
+}
+
+.cart-item__trash-svg:hover {
+	text-decoration: none;
+	color: #33312c;
+	fill: #33312c;
+}
+
 .purchase {
 	position: fixed;
 	display: flex;
@@ -190,7 +207,6 @@ h2 {
 	align-items: center;
 	justify-content: space-between;
 	border: 1px solid gray;
-	height: 430px;
 	width: 30%;
 	padding: 1% 2%;
 	margin-bottom: 30px;
@@ -252,10 +268,10 @@ h2 {
 
 .catalog-item__button {
 	width: 50%;
-	height: 40px;
+	height: 2.7vw;
 	margin-top: 10px;
 	font-weight: 300;
-	font-size: 18px;
+	font-size: 1.3vw;
 	color: #fff;
 	border-radius: 5px;
 	background-color: #33312c;
@@ -268,10 +284,10 @@ h2 {
 
 .catalog-item__button_added {
 	width: 50%;
-	height: 40px;
+	height: 2.7vw;
 	margin-top: 10px;
 	font-weight: 300;
-	font-size: 18px;
+	font-size: 1.3vw;
 	color: #fff;
 	border-radius: 5px;
 	background-color: #535351;

@@ -10,157 +10,25 @@
 		<link rel="stylesheet" href="./css/style.css" />
 	</head>
 	<body>
-		<header class="header">
-			<div class="container">
-				<div class="nav">
-					<a href="./index.html" class="nav__title nav__link">Catalog</a>
-					<a href="./cart.html" class="nav__shopping-cart nav__link" onclick="createOrderList()">
-						<div class="nav__title">Cart</div>
-						<svg class="nav__shopping-cart-icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-							<path d="M0 0h48v48H0z" fill="none" />
-							<g id="Shopicon">
-								<polygon
-									points="8.649,10.27 14.857,28.896 9.923,40 20,40 32,40 40,40 40,36 16.078,36 18.3,31 38.441,31 44.775,12 13.441,12 
+		<header class="header container">
+			<nav class="nav">
+				<a href="./index.html" class="nav__title nav__link">Catalog</a>
+				<a href="./cart.html" class="nav__shopping-cart nav__link" onclick="createOrderList()">
+					<div class="nav__title">Cart</div>
+					<svg class="nav__shopping-cart-icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+						<path d="M0 0h48v48H0z" fill="none" />
+						<g id="Shopicon">
+							<polygon
+								points="8.649,10.27 14.857,28.896 9.923,40 20,40 32,40 40,40 40,36 16.078,36 18.3,31 38.441,31 44.775,12 13.441,12 
                                 11.441,6 4,6 4,10 8.333,10 	" />
-								<circle cx="20" cy="42" r="2" />
-								<circle cx="32" cy="42" r="2" />
-							</g>
-						</svg>
-					</a>
-				</div>
-			</div>
+							<circle cx="20" cy="42" r="2" />
+							<circle cx="32" cy="42" r="2" />
+						</g>
+					</svg>
+				</a>
+			</nav>
 		</header>
-		<section class="catalog">
-			<div class="container">
-				<div class="catalog__wrapper">
-					<div class="card1 catalog-item">
-						<div class="catalog-item__img"><img src="./img/chair.jpeg" class="catalog-item__img-src" alt="chair" /></div>
-						<div class="catalog-item__content">
-							<div class="catalog-item__title">Pica Chair</div>
-							<div class="catalog-item__color">Color: Jade Velvet</div>
-							<div class="catalog-item__general-dimensions">General Dimensions: 29" L x 30" W x 27" H</div>
-							<div class="catalog-item__price">
-								<div class="catalog-item__price_default">$690</div>
-							</div>
-						</div>
-						<button class="catalog-item__button" onclick="addToCart(document.querySelector('.card1'))">Add to Cart</button>
-						<!-- <button class="catalog-item__button catalog-item__button_added">Added</button> -->
-					</div>
-					<div class="card2 catalog-item">
-						<div class="catalog-item__img"><img src="./img/lounger.jpeg" class="catalog-item__img-src" alt="lounger" /></div>
-						<div class="catalog-item__content">
-							<div>
-								<div class="catalog-item__title">Range 4-Piece Sectional Lounger</div>
-								<div class="catalog-item__color">Color: Heather Charcoal</div>
-								<div class="catalog-item__general-dimensions">General Dimensions: 91.5" L x 60.5" D x 28" H</div>
-							</div>
-							<div class="catalog-item__price">
-								<div class="catalog-item__price_default">$3405</div>
-							</div>
-						</div>
-						<button class="catalog-item__button" onclick="addToCart(document.querySelector('.card2'))">Add to Cart</button>
-					</div>
-					<div class="card3 catalog-item">
-						<div class="catalog-item__img"><img src="./img/sideboard.jpeg" class="catalog-item__img-src" alt="sideboard" /></div>
-						<div class="catalog-item__content">
-							<div>
-								<div class="catalog-item__title">Carta Credenza</div>
-								<div class="catalog-item__color">Color: Walnut</div>
-								<div class="catalog-item__general-dimensions">General Dimensions: 50" L x 16.5" W x 28" H</div>
-							</div>
-							<div class="catalog-item__price">
-								<div class="catalog-item__price_default">$395</div>
-							</div>
-						</div>
-						<button class="catalog-item__button" onclick="addToCart(document.querySelector('.card3'))">Add to Cart</button>
-					</div>
-					<div class="card4 catalog-item">
-						<div class="catalog-item__img"><img src="./img/ottoman.jpeg" class="catalog-item__img-src" alt="ottoman" /></div>
-						<div class="catalog-item__content">
-							<div>
-								<div class="catalog-item__title">Range Ottoman</div>
-								<div class="catalog-item__color">Color: Heather Charcoal</div>
-								<div class="catalog-item__general-dimensions">General Dimensions: 29.5" L x 29.5" D x 16" H</div>
-							</div>
-							<div class="catalog-item__price">
-								<div class="catalog-item__price_default">$600</div>
-							</div>
-						</div>
-						<button class="catalog-item__button" onclick="addToCart(document.querySelector('.card4'))">Add to Cart</button>
-					</div>
-					<div class="card5 catalog-item">
-						<div class="catalog-item__img"><img src="./img/lamp.jpeg" class="catalog-item__img-src" alt="lamp" /></div>
-						<div class="catalog-item__content">
-							<div>
-								<div class="catalog-item__title">Ellis Floor Lamp</div>
-								<div class="catalog-item__color">Color: Walnut</div>
-								<div class="catalog-item__general-dimensions">General Dimensions: 16" Dia. x 11" H</div>
-							</div>
-							<div class="catalog-item__price">
-								<div class="catalog-item__price_default">$190</div>
-							</div>
-						</div>
-						<button class="catalog-item__button" onclick="addToCart(document.querySelector('.card5'))">Add to Cart</button>
-					</div>
-					<div class="card6 catalog-item">
-						<div class="catalog-item__img"><img src="./img/chorus-bed.jpeg" class="catalog-item__img-src" alt="chorus bed" /></div>
-						<div class="catalog-item__content">
-							<div>
-								<div class="catalog-item__title">Chorus Bed, Queen with Wood Headboard</div>
-								<div class="catalog-item__color">Color: Walnut</div>
-								<div class="catalog-item__general-dimensions">General Dimensions: 85" D x 63" W x 14.5" H</div>
-							</div>
-							<div class="catalog-item__price">
-								<div class="catalog-item__price_default">$1260</div>
-							</div>
-						</div>
-						<button class="catalog-item__button" onclick="addToCart(document.querySelector('.card6'))">Add to Cart</button>
-					</div>
-					<div class="card7 catalog-item">
-						<div class="catalog-item__img"><img src="./img/lodge-chair.jpeg" class="catalog-item__img-src" alt="lodge chair" /></div>
-						<div class="catalog-item__content">
-							<div>
-								<div class="catalog-item__title">Lodge Chair</div>
-								<div class="catalog-item__color">Color: Camel Leather</div>
-								<div class="catalog-item__general-dimensions">General Dimensions: 29" L x 31" W x 33" H</div>
-							</div>
-							<div class="catalog-item__price">
-								<div class="catalog-item__price_default">$760</div>
-							</div>
-						</div>
-						<button class="catalog-item__button" onclick="addToCart(document.querySelector('.card7'))">Add to Cart</button>
-					</div>
-					<div class="card8 catalog-item">
-						<div class="catalog-item__img"><img src="./img/prospect-nightstand.jpeg" class="catalog-item__img-src" alt="prospect nightstand" /></div>
-						<div class="catalog-item__content">
-							<div>
-								<div class="catalog-item__title">Prospect Nightstand</div>
-								<div class="catalog-item__color">Color: Walnut</div>
-								<div class="catalog-item__general-dimensions">General Dimensions: 20" L x 17.7" D x 24" H</div>
-							</div>
-							<div class="catalog-item__price">
-								<div class="catalog-item__price_default">$395</div>
-							</div>
-						</div>
-						<button class="catalog-item__button" onclick="addToCart(document.querySelector('.card8'))">Add to Cart</button>
-					</div>
-					<div class="card9 catalog-item">
-						<div class="catalog-item__img"><img src="./img/index-stool.jpeg" class="catalog-item__img-src" alt="index stool" /></div>
-						<div class="catalog-item__content">
-							<div>
-								<div class="catalog-item__title">Index Stool</div>
-								<div class="catalog-item__color">Color: Walnut</div>
-								<div class="catalog-item__general-dimensions">General Dimensions: 13.5" Dia. x 18" H</div>
-							</div>
-							<div class="catalog-item__price">
-								<div class="catalog-item__price_default">$195</div>
-							</div>
-						</div>
-						<button class="catalog-item__button" onclick="addToCart(document.querySelector('.card9'))">Add to Cart</button>
-					</div>
-				</div>
-			</div>
-		</section>
+		<section class="catalog container catalog__wrapper"></section>
 		<script src="./js/script.js"></script>
 	</body>
 </html>
