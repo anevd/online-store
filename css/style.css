@@ -199,6 +199,7 @@ h2 {
 .catalog__wrapper {
 	flex-wrap: wrap;
 	padding-top: 50px;
+	padding-bottom: 20px;
 }
 
 .catalog-item {
@@ -296,4 +297,65 @@ h2 {
 
 .catalog-item__button_added:hover {
 	background-color: #535351;
+}
+
+.reviews__line {
+	border-top: 1px solid gray;
+}
+
+.reviews__carousel {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 700px;
+	margin: 0 auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.arrow {
+	height: 80px;
+	width: 8%;
+	cursor: pointer;
+	position: absolute;
+}
+
+.arrow:hover {
+	color: #33312c;
+	fill: #33312c;
+}
+
+.arrow_left {
+	left: -50px;
+	transform: translateX(-50%);
+}
+
+.arrow_right {
+	right: -50px;
+	transform: translateX(50%);
+}
+
+.reviews__gallery {
+	border: 1px solid black;
+	width: 700px;
+	overflow: hidden;
+}
+
+.reviews__gallery-content {
+	height: 300px;
+	width: 9999px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.reviews-item {
+	display: inline-block;
+	height: 100%;
+	width: 700px;
+}
+
+.reviews-item img {
+	height: 100%;
 }

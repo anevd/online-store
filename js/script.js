@@ -94,6 +94,7 @@ window.onload = function () {
 	}
 	if (window.location.href.indexOf("index.html") > -1) {
 		showCatalog();
+		showReviews();
 		let buttonsToAdd = document.querySelectorAll(".catalog-item__button");
 		buttonsToAdd.forEach((button) => {
 			button.addEventListener("click", addToCart);
@@ -216,3 +217,51 @@ const deleteOrderedItem = (e) => {
 	countOrderItems();
 	showTotalPrice();
 };
+
+// carousel
+
+const reviews = [
+	{
+		id: 1,
+		review: "../img/review1.jpg",
+	},
+	{
+		id: 2,
+		review: "../img/review2.jpg",
+	},
+	{
+		id: 3,
+		review: "../img/review3.jpg",
+	},
+];
+
+function showReviews() {
+	let reviewArea = document.querySelector(".reviews__gallery-content");
+	let arrowLeft = document.querySelector(".arrow_left");
+	let arrowRight = document.querySelector(".arrow_right");
+	let carousel = document.querySelector(".reviews__carousel");
+	reviews.forEach((el) => {
+		reviewArea.innerHTML += `
+	<li class='reviews-item'><img src='${el["review"]}'></li>
+	`;
+	});
+	let width = 700; // ширина картинки
+	let list = carousel.querySelector(".reviews__gallery-content");
+	let listElems = carousel.querySelectorAll(".reviews-item");
+	let position = 0; // положение ленты прокрутки
+
+	arrowLeft.onclick = function () {
+		// сдвиг влево
+		position += width;
+		position = Math.min(position, 0);
+		list.style.marginLeft = position + "px";
+	};
+
+	arrowRight.onclick = function () {
+		// сдвиг вправо
+		position -= width;
+		console.log(Math.max(position, -width * listElems.length));
+		position = Math.max(position, -width * (listElems.length - 1));
+		list.style.marginLeft = position + "px";
+	};
+}
