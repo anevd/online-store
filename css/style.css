@@ -50,11 +50,12 @@ h2 {
 }
 
 .shopping-cart {
-	padding: 4% 0;
+	padding-top: 4%;
+	padding-bottom: 4%;
 }
 
 .shopping-cart__title {
-	font-size: 40px;
+	font-size: 2.3vw;
 }
 
 .shopping-cart__count {
@@ -194,6 +195,29 @@ h2 {
 .purchase__discount-message {
 	font-weight: 300;
 	font-size: 1.2vw;
+}
+
+.shipping {
+	padding-top: 2%;
+	height: 170px;
+}
+
+.shipping__title {
+	font-size: 1.7vw;
+	font-weight: 700;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+
+.shipping__list {
+	display: none;
+}
+
+.shipping__list_active {
+	font-size: 1.3vw;
+	font-weight: 300;
+	line-height: 2vw;
+	display: block;
 }
 
 .catalog__wrapper {

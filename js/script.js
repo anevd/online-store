@@ -90,6 +90,7 @@ window.onload = function () {
 		countOrderItems();
 		showInCart();
 		showTotalPrice();
+		showShippingMethods();
 		buttonCart.addEventListener("click", useDiscount);
 	}
 	if (window.location.href.indexOf("index.html") > -1) {
@@ -245,23 +246,35 @@ function showReviews() {
 	<li class='reviews-item'><img src='${el["review"]}'></li>
 	`;
 	});
-	let width = 700; // ширина картинки
+	let width = 700;
 	let list = carousel.querySelector(".reviews__gallery-content");
 	let listElems = carousel.querySelectorAll(".reviews-item");
-	let position = 0; // положение ленты прокрутки
+	let position = 0;
 
 	arrowLeft.onclick = function () {
-		// сдвиг влево
 		position += width;
 		position = Math.min(position, 0);
 		list.style.marginLeft = position + "px";
 	};
 
 	arrowRight.onclick = function () {
-		// сдвиг вправо
 		position -= width;
 		console.log(Math.max(position, -width * listElems.length));
 		position = Math.max(position, -width * (listElems.length - 1));
 		list.style.marginLeft = position + "px";
 	};
+}
+
+// list
+
+function showShippingMethods() {
+	let title = document.querySelector(".shipping__title");
+	let list = document.querySelector(".shipping__list");
+	let mark = document.querySelector(".shipping__mark");
+	title.addEventListener("click", function () {
+		if (mark.classList.toggle("shipping__mark_opened")) {
+			mark.innerHTML = "▼ ";
+		} else mark.innerHTML = "▶ ";
+		list.classList.toggle("shipping__list_active");
+	});
 }
