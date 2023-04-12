@@ -75,27 +75,6 @@ const data = [
 
 const dataOrdered = [];
 
-const orderItemTemplate = `
-<div class="cart-item">
-						<div class="cart-item__img"><img src="" class="cart-item__img-src" alt="" /></div>
-						<div class="cart-item__content">
-							<div>
-								<div class="cart-item__title"></div>
-								<div class="cart-item__color"></div>
-								<div class="cart-item__general-dimensions"></div>
-							</div>
-							<div class="cart-item__price">
-								<div class="cart-item__price_default"></div>
-							</div>
-						</div>
-						<button class="cart-item__trash">
-					<svg class="cart-item__trash-svg" fill="#000000" width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-						<path
-							d="M22,5a1,1,0,0,1-1,1H3A1,1,0,0,1,3,4H8V3A1,1,0,0,1,9,2h6a1,1,0,0,1,1,1V4h5A1,1,0,0,1,22,5ZM4.934,21.071,4,8H20l-.934,13.071a1,1,0,0,1-1,.929H5.931A1,1,0,0,1,4.934,21.071ZM15,18a1,1,0,0,0,2,0V12a1,1,0,0,0-2,0Zm-4,0a1,1,0,0,0,2,0V12a1,1,0,0,0-2,0ZM7,18a1,1,0,0,0,2,0V12a1,1,0,0,0-2,0Z" />
-					</svg>
-				</button>
-					</div>`;
-
 let catalog = document.querySelector(".catalog__wrapper");
 const total = document.querySelector(".purchase__total-price");
 let order = [];
